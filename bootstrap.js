@@ -3,7 +3,9 @@ Cu.import("resource://gre/modules/Services.jsm");
 
 let cleanupAry = [];
 
-function abQuit() {
+function abQuit(e) {
+  // Only care about left-clicking
+  if (e.button !== 0) return;
   Cc['@mozilla.org/toolkit/app-startup;1'].getService(Ci.nsIAppStartup)
       .quit(Ci.nsIAppStartup.eAttemptQuit);
 }
