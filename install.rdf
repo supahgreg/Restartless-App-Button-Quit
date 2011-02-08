@@ -8,7 +8,7 @@
     <description>Allows you to double-click the app button to quickly quit.</description>
     <homepageURL>https://github.com/supahgreg/Restartless-App-Button-Quit</homepageURL>
     <iconURL>http://phob.net/restartless.appbutton.quit.png</iconURL>
-    <version>3</version>
+    <version>4</version>
 
     <bootstrap>true</bootstrap>
     <type>2</type>
