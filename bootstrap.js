@@ -3,15 +3,15 @@ Cu.import("resource://gre/modules/Services.jsm");
 
 let cleanupAry = [];
 
-function abQuit(e) {
-  // Only care about left-clicking
-  if (e.button !== 0) return;
-  Cc['@mozilla.org/toolkit/app-startup;1'].getService(Ci.nsIAppStartup)
-      .quit(Ci.nsIAppStartup.eAttemptQuit);
-}
-
 function main(win) {
   let appButton = win.document.getElementById("appmenu-button");
+
+  function abQuit(e) {
+    // Only care about left-clicking
+    if (e.button !== 0) return;
+    win.close();
+  }
+
   appButton.addEventListener("dblclick", abQuit, true);
 
   let idx1 = cleanupAry.push(function() {
