@@ -9,7 +9,7 @@ function main(win) {
   function abQuit(e) {
     // Only care about left-clicking
     if (e.button !== 0) return;
-    win.close();
+    win.document.getElementById('cmd_closeWindow').doCommand();
   }
 
   appButton.addEventListener("dblclick", abQuit, true);
