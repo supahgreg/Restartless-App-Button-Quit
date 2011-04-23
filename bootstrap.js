@@ -7,6 +7,7 @@ function main(win) {
   let appButton = win.document.getElementById("appmenu-button");
 
   function abQuit(e) {
+    if (e.target != appButton) return;
     // Only care about left-clicking
     if (e.button !== 0) return;
     win.document.getElementById('cmd_closeWindow').doCommand();
