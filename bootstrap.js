@@ -5,6 +5,7 @@ let cleanupAry = [];
 
 function main(win) {
   let appButton = win.document.getElementById("appmenu-button");
+  if (!appButton) appButton = win.document.getElementById("ctr_appbutton");
 
   function abQuit(e) {
     if (e.target != appButton) return;
