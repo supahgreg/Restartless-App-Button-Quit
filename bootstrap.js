@@ -5,7 +5,8 @@ let cleanupAry = [];
 
 function main(win) {
   let appButton = win.document.getElementById("appmenu-button");
-  if (!appButton) appButton = win.document.getElementById("ctr_appbutton");
+  if (!appButton) appButton = win.document.getElementById("ctr_appbutton2"); // Default CTR button
+  if (!appButton) appButton = win.document.getElementById("ctr_appbutton"); // Toolbar CTR button
 
   function abQuit(e) {
     if (e.target != appButton) return;
